@@ -1,5 +1,5 @@
 var request = require('superagent');
-var token = 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzcEBldG4uY29tIiwiaXNzIjoiVyBXIiwiZXhwIjoxNTQzNTczOTI4fQ.TlsbhVPRouCK1TaQIPVgwVZki5are8uT6p-cTkn9w52GPWcrVrwWkmZDFZF6PrQMQWO4_erEnxcgNVTZmaewHg';
+var token = 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGVwaGRhdmlzaHlkZTFAZ21haWwuY29tIiwiaXNzIjoiICAgIiwiZXhwIjoxNTQzNTgxNjQzfQ.Wm0BLGdgxokIA78y1cpqu2CWTK-Tz1sQnYlmKBz3L-oMf4qoHKLn_K7PbM56PDrZ9z9JmvuzVcQGfNDfi8sVSQ';
 
 const login = (response, username = "", password = "") => {
   new Promise((resolve, reject) => {
@@ -59,12 +59,12 @@ const pair = (response) => {
 const setPanel = (response) => {
   new Promise((resolve, reject) => {
     request
-      .put('https://www.eatonsecureconnect.com/m2m-eaton-web/async/system/partitions-1/')
+      .put('https://www.eatonsecureconnect.cloud/m2m-eaton-web/async/system/partitions-1/')
       .send({
         "state": "fullset" //unset,set.
       })
       .set('cache-control', 'no-cache')
-      .set('client-token', 'o5Hd2smYzC10UrPPspyY9jKx0VMz5OgQ9')
+      .set('client-token', 'eP4fK3fsvfE1wVELLjHYlZ8kQGWKSUJkr')
       .set('Content-Type', 'application/json')
       .set('jwt', token)
       .end((err, res) => {
@@ -97,12 +97,12 @@ const setPanel = (response) => {
 const unsetPanel = (response) => {
   new Promise((resolve, reject) => {
     request
-      .put('https://www.eatonsecureconnect.com/m2m-eaton-web/async/system/partitions-1/')
+      .put('https://www.eatonsecureconnect.cloud/m2m-eaton-web/async/system/partitions-1/')
       .send({
         "state": "unset"
       })
       .set('cache-control', 'no-cache')
-      .set('client-token', 'o5Hd2smYzC10UrPPspyY9jKx0VMz5OgQ9')
+      .set('client-token', 'eP4fK3fsvfE1wVELLjHYlZ8kQGWKSUJkr')
       .set('Content-Type', 'application/json')
       .set('jwt', token)
       .end((err, res) => {
@@ -135,9 +135,9 @@ const unsetPanel = (response) => {
 const getPanelState = (response) => {
   new Promise((resolve, reject) => {
     request
-      .get('https://www.eatonsecureconnect.com/m2m-eaton-web/async/system/partitions-1/')
+      .get('https://www.eatonsecureconnect.cloud/m2m-eaton-web/async/system/partitions-1/')
       .set('cache-control', 'no-cache')
-      .set('client-token', 'o5Hd2smYzC10UrPPspyY9jKx0VMz5OgQ9')
+      .set('client-token', 'eP4fK3fsvfE1wVELLjHYlZ8kQGWKSUJkr')
       .set('Content-Type', 'application/json')
       .set('jwt', token)
       .end((err, res) => {
