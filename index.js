@@ -6,6 +6,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
+//Comment below line when actually doing it for demo as crashes for now.
+var gclogs = require('./google-cloud');
 
 var matchRoute = (query) => {
   if (query.indexOf("login") != -1 || query.indexOf("sign in") != -1) {
