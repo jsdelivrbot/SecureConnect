@@ -59,7 +59,7 @@ const pair = (response) => {
 const setPanel = (response) => {
   new Promise((resolve, reject) => {
     request
-      .put('https://www.eatonsecureconnect.cloud/m2m-eaton-web/async/system/partitions-1/')
+      .put('https://www.eatonsecureconnect.com/m2m-eaton-web/async/system/partitions-1/')
       .send({
         "state": "fullset" //unset,set.
       })
@@ -97,7 +97,7 @@ const setPanel = (response) => {
 const unsetPanel = (response) => {
   new Promise((resolve, reject) => {
     request
-      .put('https://www.eatonsecureconnect.cloud/m2m-eaton-web/async/system/partitions-1/')
+      .put('https://www.eatonsecureconnect.com/m2m-eaton-web/async/system/partitions-1/')
       .send({
         "state": "unset"
       })
@@ -135,7 +135,7 @@ const unsetPanel = (response) => {
 const getPanelState = (response) => {
   new Promise((resolve, reject) => {
     request
-      .get('https://www.eatonsecureconnect.cloud/m2m-eaton-web/async/system/partitions-1/')
+      .get('https://www.eatonsecureconnect.com/m2m-eaton-web/async/system/partitions-1/')
       .set('cache-control', 'no-cache')
       .set('client-token', clientToken)
       .set('Content-Type', 'application/json')
