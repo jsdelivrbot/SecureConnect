@@ -1,6 +1,6 @@
 var request = require('superagent');
-var token = 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsMUBldG4uY29tIiwiaXNzIjoiUyBEIiwiZXhwIjoxNTQ0MDkxMTc2fQ.HJYn72NsSzyVaGqo99dv_jszreucHLttOwf7WoeBSi2wib6srOrxLBRrIk3J3970VSYAQjR-BV7XbAIKtv9IDg';
-var clientToken='jBBGmDGZxS9Sg1mxpwO3m83VWGDH8x80d';
+var token = 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGVwaGRhdmlzaHlkZTFAZ21haWwuY29tIiwiaXNzIjoiICAgIiwiZXhwIjoxNTQ0MTc1ODg2fQ.v6irmLS087HXk0C_wL_9JqcwdYm7zd6jr7-FOdV-9ZQeCZ1aB960fxzIqfkWSYNrMDj-dl-lq3Pgkpf46FJd7w';
+var clientToken='eP4fK3fsvfE1wVELLjHYlZ8kQGWKSUJkr';
 const login = (response, username = "", password = "") => {
   new Promise((resolve, reject) => {
     request
@@ -59,7 +59,7 @@ const pair = (response) => {
 const setPanel = (response) => {
   new Promise((resolve, reject) => {
     request
-      .put('https://www.eatonsecureconnect.com/m2m-eaton-web/async/system/partitions-1/')
+      .put('https://www.eatonsecureconnect.cloud/m2m-eaton-web/async/system/partitions-1/')
       .send({
         "state": "fullset" //unset,set.
       })
@@ -97,7 +97,7 @@ const setPanel = (response) => {
 const unsetPanel = (response) => {
   new Promise((resolve, reject) => {
     request
-      .put('https://www.eatonsecureconnect.com/m2m-eaton-web/async/system/partitions-1/')
+      .put('https://www.eatonsecureconnect.cloud/m2m-eaton-web/async/system/partitions-1/')
       .send({
         "state": "unset"
       })
@@ -135,7 +135,7 @@ const unsetPanel = (response) => {
 const getPanelState = (response) => {
   new Promise((resolve, reject) => {
     request
-      .get('https://www.eatonsecureconnect.com/m2m-eaton-web/async/system/partitions-1/')
+      .get('https://www.eatonsecureconnect.cloud/m2m-eaton-web/async/system/partitions-1/')
       .set('cache-control', 'no-cache')
       .set('client-token', clientToken)
       .set('Content-Type', 'application/json')
