@@ -1,4 +1,5 @@
 // Imports the Google Cloud client library
+// https://cloud.google.com/logging/docs/api/tasks/creating-logs
 const {Logging} = require('@google-cloud/logging');
 
 // Your Google Cloud Platform project ID
