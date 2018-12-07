@@ -4,7 +4,7 @@ var clientToken='eP4fK3fsvfE1wVELLjHYlZ8kQGWKSUJkr';
 const login = (response, username = "", password = "") => {
   new Promise((resolve, reject) => {
     request
-      .put('https://www.eatonsecureconnect.com/m2m-eaton-web/rest/mobileUser/jwt/login')
+      .put('https://www.eatonsecureconnect.cloud/m2m-eaton-web/rest/mobileUser/jwt/login')
       .send({
         "login": username,
         "password": password
@@ -27,7 +27,7 @@ const login = (response, username = "", password = "") => {
 const pair = (response) => {
   new Promise((resolve, reject) => {
     request
-      .get('https://www.eatonsecureconnect.com/m2m-eaton-web/rest/mobileUser/pair/all')
+      .get('https://www.eatonsecureconnect.cloud/m2m-eaton-web/rest/mobileUser/pair/all')
       .set('applicationId', 'a10a93111cc44bb4')
       .set('jwt', token)
       .end((err, res) => {
